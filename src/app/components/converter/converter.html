@@ -7,24 +7,25 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="from-currency">
+            <div class="form-group">
                 <label for="from-currency">From currency</label>
                 <select id="from-currency" class="form-control" ng-model="vm.fromCurrency">
-                    <option value="">Select currency</option>
+                    <option value="">Please Choose</option>
                     <option ng-repeat="currency in vm.currencies" value="{{ currency.cc }}">{{ currency.name }} ({{ currency.symbol }})</option>
                 </select>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="from-currency">
-                <label for="to-currency">Select currency</label>
+            <div class="form-group">
+                <label for="to-currency">To currency</label>
                 <select id="to-currency" class="form-control" ng-model="vm.toCurrency">
-                    <option value="">--Select--</option>
+                    <option value="">Please Choose</option>
                     <option ng-repeat="currency in vm.currencies" value="{{ currency.cc }}">{{ currency.name }} ({{ currency.symbol }})</option>
                 </select>
             </div>
         </div>
     </div>
+
     <div class="row" ng-show="vm.toCurrency && vm.toAmount && !vm.errorMessage">
         <div class="col-md-12">
             <div class="alert alert-success" role="alert">
