@@ -38,7 +38,6 @@ class ConverterController {
                     else {
                         this.errorMessage = 'Sorry, cannot convert these currencies';
                     }
-                    $scope.$apply();
                 })
         };
 
