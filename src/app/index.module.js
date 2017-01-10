@@ -6,7 +6,7 @@ import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { ConverterDirective } from '../app/components/converter/converter.directive';
 import { CurrenciesFactory } from '../app/components/converter/currencies.factory';
 
-angular.module('onlineConverter', ['ngAria', 'ngResource', 'ui.router', 'ui.bootstrap'])
+angular.module('onlineConverter', ['ngResource', 'ui.router', 'ui.bootstrap'])
     .config(config)
     .config(routerConfig)
     .controller('MainController', MainController)
