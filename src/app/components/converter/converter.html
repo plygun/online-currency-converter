@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="from-amount">Value to exchange from</label>
+                <input type="number" id="from-amount" class="form-control" placeholder="Enter value" ng-model="vm.fromAmount">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="from-currency">
+                <label for="from-currency">From currency</label>
+                <select id="from-currency" class="form-control" ng-model="vm.fromCurrency">
+                    <option value="">Select currency</option>
+                    <option ng-repeat="currency in vm.currencies" value="{{ currency.cc }}">{{ currency.name }} ({{ currency.symbol }})</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="from-currency">
+                <label for="to-currency">Select currency</label>
+                <select id="to-currency" class="form-control" ng-model="vm.toCurrency">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="currency in vm.currencies" value="{{ currency.cc }}">{{ currency.name }} ({{ currency.symbol }})</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-show="vm.toCurrency && vm.toAmount && !vm.errorMessage">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+                {{ vm.toAmount }} {{ vm.toCurrency}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="vm.errorMessage">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert">
+                {{ vm.errorMessage }}
+            </div>
+        </div>
+    </div>
+</div>
