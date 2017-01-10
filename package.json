@@ -57,5 +57,10 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:plygun/online-currency-converter.git"
   }
 }
